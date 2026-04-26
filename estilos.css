@@ -1,0 +1,56 @@
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+/* HEADER */
+header {
+    background: green;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* NAV */
+nav {
+    background: black;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* CONTENIDO */
+main {
+    display: flex;
+}
+
+/* 🔥 CLAVE: secciones ocultas */
+section {
+    display: none;
+    flex: 3;
+    padding: 10px;
+}
+
+/* 🔥 SOLO ESTA SE MUESTRA */
+section.active {
+    display: block;
+}
+
+/* ASIDE */
+aside {
+    flex: 1;
+    background: lightgray;
+    padding: 10px;
+}
+
+/* FOOTER */
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

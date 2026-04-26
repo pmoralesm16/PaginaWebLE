@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- PASO 1: Configuración básica -->
+    <meta charset="UTF-8">
+    <title>Mi Página Web</title>
+
+    <!-- PASO 2: Conectar CSS -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <!-- PASO 3: Encabezado -->
+    <header>
+        <h1>Mi Página Web</h1>
+    </header>
+
+    <!-- PASO 4: Menú de navegación -->
+    <nav>
+        <!-- IMPORTANTE:
+             onclick llama a una función de JavaScript -->
+        <a onclick="mostrarSeccion('inicio')">Inicio</a>
+        <a onclick="mostrarSeccion('sobreMi')">Sobre mí</a>
+        <a onclick="mostrarSeccion('contacto')">Contacto</a>
+    </nav>
+
+    <!-- PASO 5: Contenido principal -->
+    <main>
+
+        <!-- SECCIÓN 1: INICIO -->
+        <!-- class="active" hace que esta se vea al inicio -->
+        <section id="inicio" class="active">
+            <h2>Inicio</h2>
+            <p>Bienvenido a mi página web.</p>
+
+            <!-- Imagen -->
+            <img src="imagen.jpg" alt="Mi imagen">
+
+            <br><br>
+
+            <!-- Enlace -->
+            <a href="https://www.google.com" target="_blank">Ir a Google</a>
+        </section>
+
+        <!-- SECCIÓN 2: SOBRE MÍ -->
+        <section id="sobreMi">
+            <h2>Sobre mí</h2>
+            <p>Soy catedrática de Ingeniería en Sistemas.</p>
+        </section>
+
+        <!-- SECCIÓN 3: CONTACTO -->
+        <section id="contacto">
+            <h2>Contacto</h2>
+
+            <!-- Formulario -->
+            <form onsubmit="enviarFormulario(event)">
+                <label>Nombre:</label>
+                <input type="text" id="nombre" required>
+
+                <label>Correo:</label>
+                <input type="email" required>
+
+                <label>Mensaje:</label>
+                <textarea required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+
+            <!-- Mensaje -->
+            <p id="mensajeEnviado"></p>
+        </section>
+
+        <!-- BARRA LATERAL -->
+        <aside>
+            <h3>Información</h3>
+            <p>Curso: Introducción a Sistemas</p>
+        </aside>
+
+    </main>
+
+    <!-- PIE -->
+    <footer>
+        <p>© 2026 Mi Página Web</p>
+    </footer>
+
+    <!-- PASO FINAL: Conectar JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
